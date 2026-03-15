@@ -74,7 +74,7 @@
       dialog.close();
       if (val === old) return;
       rowNode.data.notes = val;
-      api.applyTransaction({ update: [rowNode.data] });
+      rowNode.setDataValue('notes', val);
       var errors = validateRow(rowNode.data);
       if (errors){
         cellErrors[rowNode.data.id] = errors;
@@ -184,7 +184,6 @@
       { headerName: 'Amount',     field: 'amount',     width: 120, editable: true,
         cellEditor: 'agTextCellEditor',
         cellClassRules: errClass('amount'),     tooltipValueGetter: errTip('amount'),
-        valueParser:  function(p){ return p.newValue === '' || p.newValue == null ? '' : Number(p.newValue); },
         valueSetter:  function(p){ p.data.amount = (p.newValue === '' || p.newValue == null) ? '' : Number(p.newValue); return true; } },
       { headerName: 'Date',       field: 'date',       width: 150, editable: true,
         cellEditor: 'dateInputCellEditor', cellEditorParams: {min: todayIso(), max: '2100-12-31'},
