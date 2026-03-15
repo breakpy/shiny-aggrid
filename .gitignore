@@ -1,0 +1,10 @@
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+rsconnect/
+# Vendor AG Grid bundles (loaded from CDN if not present)
+www/ag-grid-community.min.noStyle.js
+www/ag-grid-community.min.js
+www/ag-grid.css
+www/ag-theme-alpine.css

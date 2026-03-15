@@ -1,0 +1,71 @@
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.my-grid { box-shadow: 0 2px 6px rgba(0,0,0,0.08); border-radius: 10px; overflow: hidden; }
+.btn-edit { padding: 4px 8px; font-size: 12px; }
+
+.ag-theme-alpine .ag-header-cell-label { font-weight: 600; }
+
+.ag-theme-alpine .ag-cell {
+	border-radius: 6px;
+}
+
+.ag-theme-alpine .ag-cell-focus,
+.ag-theme-alpine .ag-cell-inline-editing {
+	border-radius: 8px;
+}
+
+.ag-theme-alpine .ag-cell-editor input,
+.ag-theme-alpine .ag-cell-editor textarea,
+.ag-theme-alpine .ag-cell-editor select,
+.ag-theme-alpine input.ag-input-field-input,
+.ag-theme-alpine .ag-large-text,
+.ag-theme-alpine .ag-rich-select-value {
+	border-radius: 8px;
+}
+
+.ag-theme-alpine .ag-popup-editor {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.ag-theme-alpine .ag-popup-editor .ag-cell-editor {
+	padding: 6px;
+}
+
+.ag-theme-alpine .ag-popup-editor .ag-cell-editor input,
+.ag-theme-alpine .ag-popup-editor .ag-cell-editor select {
+	min-height: 40px;
+	padding: 8px 10px;
+}
+
+.ag-theme-alpine .ag-cell.cell-date-error {
+	background-color: #ffe8e8;
+	border: 1px solid #d14343;
+}
+
+.container-note { margin-top: 10px; font-size: 13px; color: #555; }
+
+@keyframes rowSaveFlash {
+  0%   { background-color: #b6f2b6; }
+  80%  { background-color: #b6f2b6; }
+  100% { background-color: transparent; }
+}
+.row-flash-success .ag-cell {
+  animation: rowSaveFlash 2.2s ease-out forwards;
+  border-radius: 0;
+}
+
+@keyframes rowErrorFlash {
+  0%   { background-color: #ffd0d0; }
+  80%  { background-color: #ffd0d0; }
+  100% { background-color: transparent; }
+}
+.row-flash-error .ag-cell {
+  animation: rowErrorFlash 2.2s ease-out forwards;
+  border-radius: 0;
+}
+
+.ag-theme-alpine .ag-cell.cell-error {
+  border: 2px solid #d14343 !important;
+  border-radius: 4px;
+  background-color: #fff5f5;
+}
